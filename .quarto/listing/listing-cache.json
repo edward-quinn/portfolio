@@ -1,0 +1,22 @@
+{
+  "listingMap": {
+    "R\\index.qmd": [
+      "R/",
+      "R",
+      "/R/",
+      "."
+    ],
+    "python\\index.qmd": [
+      "Python/",
+      "python/",
+      "python",
+      "."
+    ],
+    "Python.qmd": [
+      "Python/**/*.qmd"
+    ],
+    "R.qmd": [
+      "R/**/*.qmd"
+    ]
+  }
+}

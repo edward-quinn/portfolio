@@ -1,0 +1,22 @@
+---
+title: "R Project 2"
+date: 2024-09-15
+categories: [R Projects]
+---
+
+
+# Use the local renv lock file to recreate virtual environment
+```{r}
+#| echo: false
+#| results: 'hide'
+renv::use(lockfile = "renv.lock")
+```
+
+## Overview
+
+This is a second R-based project.
+
+```{r}
+# R code goes here
+print(seq(1,10,1))
+```

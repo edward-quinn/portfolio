@@ -1,0 +1,17 @@
+{
+  "hash": "47cade3c7640a64d464c3beb358ffb2d",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Project 1\"\ndate: 2024-09-15\ncategories: [R Projects]\n---\n\n\n\n\n# Use the local renv lock file to recreate virtual environment\n\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(1)\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 1\n```\n\n\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(c(1,2))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 1 2\n```\n\n\n:::\n:::\n\n\n\n\n## Overview\n\nThis is an R-based project.\n\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n# R code goes here\nprint(seq(1,10,1))\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n [1]  1  2  3  4  5  6  7  8  9 10\n```\n\n\n:::\n:::\n",
+    "supporting": [
+      "project_r1_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

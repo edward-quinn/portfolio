@@ -1,0 +1,15 @@
+---
+title: "Python Project 1"
+date: 2024-09-15
+categories: [Python Projects]
+---
+
+## Overview
+
+This is a Python-based project.
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```

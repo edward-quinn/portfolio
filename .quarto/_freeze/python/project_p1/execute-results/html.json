@@ -1,0 +1,12 @@
+{
+  "hash": "9dc91fb53d593794955be41ee1c25b04",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Python Project 1\"\ndate: 2024-09-15\ncategories: [Python Projects]\n---\n\n\n\n\n## Overview\n\nThis is a Python-based project.\n\n::: {#d5473795 .cell execution_count=1}\n``` {.python .cell-code}\n# Python code goes here\nprint('hello python')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nhello python\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "project_p1_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

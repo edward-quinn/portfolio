@@ -1,0 +1,12 @@
+{
+  "hash": "cc0338415e8a54e2df7214b65cf710b8",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"Python Projects\"\nlisting:\n  contents: .\n  type: default\n---\n\n\n## Python Projects\n\nBelow are my Python-based data science projects:\n\n::: {#f7c4c7f7 .cell execution_count=1}\n``` {.python .cell-code}\nprint('hello python what is this')\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nhello python what is this\n```\n:::\n:::\n\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

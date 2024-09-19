@@ -1,0 +1,41 @@
+{
+  "index.qmd": {
+    "index.html": "91af49cf"
+  },
+  "portfolio.qmd": {
+    "portfolio.html": "bc8041eb"
+  },
+  "python/project_p1.qmd": {
+    "project_p1.html": "b7104839"
+  },
+  "R/project_r1.qmd": {
+    "project_r1.html": "9fbd11bb"
+  },
+  "R/index.qmd": {
+    "index.html": "63aafe1b"
+  },
+  "python/index.qmd": {
+    "index.html": "de98b050"
+  },
+  "resume.qmd": {
+    "resume.html": "cd4517ce"
+  },
+  "Python.qmd": {
+    "Python.html": "c29bf789"
+  },
+  "R/project_r1/project_r1.qmd": {
+    "project_r1.html": "b65db75f"
+  },
+  "R.qmd": {
+    "R.html": "debc045c"
+  },
+  "Python/project_p1/project_p1.qmd": {
+    "project_p1.html": "c70c5a5e"
+  },
+  "Python/project_p2/project_p2.qmd": {
+    "project_p2.html": "827e762b"
+  },
+  "R/project_r2/project_r2.qmd": {
+    "project_r2.html": "bf4c2b1d"
+  }
+}

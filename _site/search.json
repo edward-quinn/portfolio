@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "R/project_r1.html",
+    "href": "R/project_r1.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "This is an R-based project.\n\n# R code goes here\nprint(seq(1,10,1))\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "R/project_r1.html#overview",
+    "href": "R/project_r1.html#overview",
+    "title": "Project 1",
+    "section": "",
+    "text": "This is an R-based project.\n\n# R code goes here\nprint(seq(1,10,1))\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "python/project_p1.html",
+    "href": "python/project_p1.html",
+    "title": "Python Project 1",
+    "section": "",
+    "text": "This is a Python-based project.\n\n# Python code goes here\nprint('hello python')\n\nhello python"
+  },
+  {
+    "objectID": "python/project_p1.html#overview",
+    "href": "python/project_p1.html#overview",
+    "title": "Python Project 1",
+    "section": "",
+    "text": "This is a Python-based project.\n\n# Python code goes here\nprint('hello python')\n\nhello python"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Edward B. Quinn, PhD, MPH",
+    "section": "",
+    "text": "I am a Senior Data Analyst and a published health researcher. My PhD training was in epigenetics and health equity, where I used R to analyze over 400 million data points.\nMy skill set is currently expanding to include Shiny, SQL, Python, and Tableau. In my spare time, I love to travel and watch mixed martial arts."
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "Edward B. Quinn, PhD, MPH",
+    "section": "Featured Projects",
+    "text": "Featured Projects\n\nR Projects\nPython Projects"
+  },
+  {
+    "objectID": "R/index.html",
+    "href": "R/index.html",
+    "title": "R Projects",
+    "section": "",
+    "text": "Below are my R-based data science projects:"
+  },
+  {
+    "objectID": "R/index.html#r-projects",
+    "href": "R/index.html#r-projects",
+    "title": "R Projects",
+    "section": "",
+    "text": "Below are my R-based data science projects:"
+  },
+  {
+    "objectID": "python/index.html",
+    "href": "python/index.html",
+    "title": "Python Projects",
+    "section": "",
+    "text": "Below are my Python-based data science projects:\n\nprint('hello python what is this')\n\nhello python what is this"
+  },
+  {
+    "objectID": "python/index.html#python-projects",
+    "href": "python/index.html#python-projects",
+    "title": "Python Projects",
+    "section": "",
+    "text": "Below are my Python-based data science projects:\n\nprint('hello python what is this')\n\nhello python what is this"
+  },
+  {
+    "objectID": "R.html",
+    "href": "R.html",
+    "title": "R Projects",
+    "section": "",
+    "text": "Project 1\n\n\n\n\n\n\nR Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nR Project 2\n\n\n\n\n\n\nR Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "Python.html",
+    "href": "Python.html",
+    "title": "Python Projects",
+    "section": "",
+    "text": "Python Project 1\n\n\n\n\n\n\nPython Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPython Project 2\n\n\n\n\n\n\nPython Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "R/project_r1/project_r1.html",
+    "href": "R/project_r1/project_r1.html",
+    "title": "Project 1",
+    "section": "",
+    "text": "Code\nprint(1)\n\n\n[1] 1\n\n\n\n\nCode\nprint(c(1,2))\n\n\n[1] 1 2\n\n\n\n\nThis is an R-based project.\n\n\nCode\n# R code goes here\nprint(seq(1,10,1))\n\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "R/project_r1/project_r1.html#overview",
+    "href": "R/project_r1/project_r1.html#overview",
+    "title": "Project 1",
+    "section": "",
+    "text": "This is an R-based project.\n\n\nCode\n# R code goes here\nprint(seq(1,10,1))\n\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "Python/project_p1/project_p1.html",
+    "href": "Python/project_p1/project_p1.html",
+    "title": "Python Project 1",
+    "section": "",
+    "text": "This is a Python-based project.\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
+  },
+  {
+    "objectID": "Python/project_p1/project_p1.html#overview",
+    "href": "Python/project_p1/project_p1.html#overview",
+    "title": "Python Project 1",
+    "section": "",
+    "text": "This is a Python-based project.\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
+  },
+  {
+    "objectID": "Python/project_p2/project_p2.html",
+    "href": "Python/project_p2/project_p2.html",
+    "title": "Python Project 2",
+    "section": "",
+    "text": "This is a second Python-based project.\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
+  },
+  {
+    "objectID": "Python/project_p2/project_p2.html#overview",
+    "href": "Python/project_p2/project_p2.html#overview",
+    "title": "Python Project 2",
+    "section": "",
+    "text": "This is a second Python-based project.\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
+  },
+  {
+    "objectID": "R/project_r2/project_r2.html",
+    "href": "R/project_r2/project_r2.html",
+    "title": "R Project 2",
+    "section": "",
+    "text": "This is a second R-based project.\n\n\nCode\n# R code goes here\nprint(seq(1,10,1))\n\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "R/project_r2/project_r2.html#overview",
+    "href": "R/project_r2/project_r2.html#overview",
+    "title": "R Project 2",
+    "section": "",
+    "text": "This is a second R-based project.\n\n\nCode\n# R code goes here\nprint(seq(1,10,1))\n\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  }
+]
