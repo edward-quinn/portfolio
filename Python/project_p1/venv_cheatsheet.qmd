@@ -6,6 +6,8 @@ categories: [Python Projects]
 
 # A cheatsheet for windows
 
+## Create and save a virtual environment
+
 1. Make sure you are in the directory where you want to create a virtual environment.
 2. Use the following code: `python -m venv .venv`
 3. Activate the virtual environment using `.\.venv\Scripts\activate`
@@ -13,3 +15,9 @@ categories: [Python Projects]
 5. Export dependencies by using `pip freeze >> requirements.txt`
 6. Deactivate the virtual environment by using `deactivate`
 7. Make sure to add .venv to your .gitignore file before committing.
+
+## Recreate a virtual environment
+
+1. Pull the repo from github
+2. Create a new virtual environment as described above.
+3. Use the requirements.txt to file to recreate the virtual environment like so: `pip install -r requirements.txt`.
