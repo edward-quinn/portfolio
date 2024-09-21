@@ -1,5 +1,3 @@
-# portfolio
+# Data Science Portfolio
 
-a change I made
-
->Yet another change
+A collection of posts demonstrating data science skills.
