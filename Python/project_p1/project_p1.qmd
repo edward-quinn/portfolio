@@ -1,15 +1,15 @@
 ---
-title: "Python Project 1"
+title: "Using Virtual Environments in Python"
 date: 2024-09-15
 categories: [Python Projects]
 ---
 
-## Overview
+# A cheatsheet for windows
 
-This is a Python-based project.
-
-```{python}
-# Python code goes here
-print('hello python')
-
-```
+1. Make sure you are in the directory where you want to create a virtual environment.
+2. Use the following code: `python -m venv .venv`
+3. Activate the virtual environment using `.\.venv\Scripts\activate`
+4. pip install whatever it is you need to install. 
+5. Export dependencies by using `pip freeze >> requirements.txt`
+6. Deactivate the virtual environment by using `deactivate`
+7. Make sure to add .venv to your .gitignore file before committing.
