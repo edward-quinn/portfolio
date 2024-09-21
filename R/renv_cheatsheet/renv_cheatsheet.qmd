@@ -1,14 +1,18 @@
 ---
 title: "renv Cheatsheet"
 date: 2024-09-15
+draft: true
 categories: [R]
 ---
 
 # An renv cheatsheet
 
-1. Use renv::init() to start a brand new project
-2. Install packages as normal using install.packages()
-3. Occasionally use renv::snapshot()
+1. Use `renv::init()` to start a brand new project. This creates an renv.lock file listing packages and versions.
+2. Install packages as normal using `install.packages()`
+3. Occasionally use `renv::snapshot()` to capture updates to your virtual environment within the renv.lock file
+4. After you finish a post, use `renv::snapshot()` one last time.
+5. Copy the renv.lock file into the root directory for the particular post you just finished. `cp renv.lock path_to_blog_post_directory/`
+6. Add the code chunk below which specifies using the local renv.lock file using `renv::use(lockfile = "renv.lock")`
 
 
 # Use the local renv lock file to recreate virtual environment
