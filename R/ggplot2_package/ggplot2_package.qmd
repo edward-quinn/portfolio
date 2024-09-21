@@ -1,0 +1,17 @@
+---
+title: "ggplot2 package in R"
+date: 2024-09-15
+categories: [R, Data Visualization]
+---
+
+# Use the local renv lock file to recreate virtual environment
+```{r}
+#| echo: false
+#| results: 'hide'
+
+#renv::use(lockfile = "renv.lock")
+```
+
+
+
+
