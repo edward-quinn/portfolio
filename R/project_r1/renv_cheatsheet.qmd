@@ -4,6 +4,11 @@ date: 2024-09-15
 categories: [R]
 ---
 
+# An renv cheatsheet
+
+1. Use renv::init() to start a brand new project
+2. Install packages as normal using install.packages()
+3. Occasionally use renv::snapshot()
 
 
 # Use the local renv lock file to recreate virtual environment
