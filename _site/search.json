@@ -74,14 +74,14 @@
     "href": "R.html",
     "title": "R Projects",
     "section": "",
-    "text": "Project 1\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "ggplot2 package in R\n\n\n\n\n\n\nR\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nrenv Cheatsheet\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Python.html",
     "href": "Python.html",
     "title": "Python Projects",
     "section": "",
-    "text": "The Seaborn library in Python\n\n\n\n\n\n\nPython\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "The Seaborn library in Python\n\n\n\n\n\n\nPython\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Virtual Environments in Python\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "R/project_r1/project_r1.html",
@@ -180,5 +180,12 @@
     "title": "Using Virtual Environments in Python",
     "section": "",
     "text": "Pull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
+  },
+  {
+    "objectID": "R/ggplot2_package/ggplot2_package.html",
+    "href": "R/ggplot2_package/ggplot2_package.html",
+    "title": "ggplot2 package in R",
+    "section": "",
+    "text": "Visualizing progress in public health using ggplot2\n\n\nMortality for major causes of death 1900 - 1918\nReference have published data on age-adjusted death rates for five leading causes of death in the United States between 1900 - 1918. Let’s look at visualization strategies to highlight different insights from the data. Big shoutout to Albert Rapp’s video\n\n\nCode\ndf &lt;- read_csv(\"https://data.cdc.gov/resource/6rkc-nb2q.csv\")\n\nsysfonts::font_add_google('Merriweather')\n\n\n\n# Important step to enable showtext font rendering!\nshowtext_auto()\n\n\n\n\nCode\ntitle_text &lt;- 'It took 100 years for the &lt;span style = \"color:#87CEEB\"&gt;**Heart Disease Death Rate**&lt;/span&gt; &lt;br&gt; to recover to levels observed in 1900'\n\ndf |&gt; \n  filter(leading_causes == \"Heart Disease\") |&gt; \nggplot(aes(year, age_adjusted_death_rate, color = leading_causes)) +\n  geom_line(linewidth = 1.5) +\n  labs(title = \"Major causes of mortality\") +\n  theme_minimal(\n    base_size = 24,\n    base_family = 'Merriweather'\n  ) +\n  labs(\n    x = \"Year\",\n    y = element_blank(),\n    title = title_text,\n    subtitle = \"Death Rate (per 100,000)\",\n    caption = \"Source: National Center for Health Statistics\"\n  ) +\n  gghighlight(\n    leading_causes == \"Heart Disease\",\n    year &lt;= 2000,\n    use_direct_label = FALSE,\n    use_group_by = FALSE,\n    unhighlighted_params = list(color = \"grey80\", linewidth = 1)\n  ) +\n  annotate(\n    'text',\n    x = 1992,\n    y = 550,\n    size = 5.5,\n    label = \"Heart Disease Death Rate\",\n    fontface = \"bold\",\n    color = \"skyblue2\"\n  ) +\n  scale_color_manual(values = \"skyblue2\") +\n  theme(\n    legend.position = \"none\",\n    panel.grid.minor = element_blank(),\n    panel.grid.major = element_line(linewidth = 0.5, linetype = 2),\n    plot.title.position = \"plot\",\n    text = element_text(color = \"grey20\"),\n    axis.text = element_text(color = \"grey40\"),\n    plot.title = ggtext::element_markdown(color = \"grey20\", family = \"Merriweather\"),\n    plot.subtitle = element_text(\n      color = \"grey30\",\n      size = rel(0.8),\n      margin = margin(b=8, unit = 'mm')\n    ),\n    plot.caption = element_text(size = rel(0.6), color = \"grey20\")\n  ) +\n  annotate(\n    'segment',\n    x = 1900,\n    xend = 2000,\n    y = 265,\n    yend = 265,\n    linetype = 2,\n    linewidth = 1,\n    color = \"grey10\"\n  )\n\n\n\n\n\n\n\n\n\nA bump chart could be interesting as well to compare changes in the rankings of age adjusted mortality rates.\nThis also a good candidate for gganimation where the lines are animated."
   }
 ]

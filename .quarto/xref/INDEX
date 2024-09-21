@@ -43,5 +43,11 @@
   },
   "Python/seaborn_library/seaborn_data_viz.qmd": {
     "seaborn_data_viz.html": "b92c9663"
+  },
+  "R/ggplot2_package/ggplot2_package.qmd": {
+    "ggplot2_package.html": "600e31f6"
+  },
+  "R/renv_cheatsheet/renv_cheatsheet.qmd": {
+    "renv_cheatsheet.html": "e4793c12"
   }
 }

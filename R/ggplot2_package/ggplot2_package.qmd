@@ -6,7 +6,7 @@ categories: [R, Data Visualization]
 
 # Visualizing progress in public health using ggplot2
 
-content
+
 
 ```{r}
 #| echo: false
@@ -17,4 +17,108 @@ content
 
 
 
+
+```{r}
+#| include: false
+#| message: false
+
+library(tidyverse)
+library(showtext)
+library(ggtext)
+library(gghighlight)
+
+```
+
+
+
+Reference have published data on age-adjusted death rates for five leading causes of death in the United States between 1900 - 1918. Let's look at visualization strategies to highlight different insights from the data. Big shoutout to Albert Rapp's video
+
+
+```{r}
+#| message: false
+#| warning: false
+
+df <- read_csv("https://data.cdc.gov/resource/6rkc-nb2q.csv")
+
+sysfonts::font_add_google('Merriweather')
+
+
+
+# Important step to enable showtext font rendering!
+showtext_auto()
+
+```
+
+
+```{r}
+#| warning: false
+
+
+title_text <- 'It took 100 years for the <span style = "color:#87CEEB">**Heart Disease Death Rate**</span> <br> to recover to levels observed in 1900'
+
+df |> 
+  filter(leading_causes == "Heart Disease") |> 
+ggplot(aes(year, age_adjusted_death_rate, color = leading_causes)) +
+  geom_line(linewidth = 1.5) +
+  labs(title = "Major causes of mortality") +
+  theme_minimal(
+    base_size = 24,
+    base_family = 'Merriweather'
+  ) +
+  labs(
+    x = "Year",
+    y = element_blank(),
+    title = title_text,
+    subtitle = "Death Rate (per 100,000)",
+    caption = "Source: National Center for Health Statistics"
+  ) +
+  gghighlight(
+    leading_causes == "Heart Disease",
+    year <= 2000,
+    use_direct_label = FALSE,
+    use_group_by = FALSE,
+    unhighlighted_params = list(color = "grey80", linewidth = 1)
+  ) +
+  annotate(
+    'text',
+    x = 1992,
+    y = 550,
+    size = 5.5,
+    label = "Heart Disease Death Rate",
+    fontface = "bold",
+    color = "skyblue2"
+  ) +
+  scale_color_manual(values = "skyblue2") +
+  theme(
+    legend.position = "none",
+    panel.grid.minor = element_blank(),
+    panel.grid.major = element_line(linewidth = 0.5, linetype = 2),
+    plot.title.position = "plot",
+    text = element_text(color = "grey20"),
+    axis.text = element_text(color = "grey40"),
+    plot.title = ggtext::element_markdown(color = "grey20", family = "Merriweather"),
+    plot.subtitle = element_text(
+      color = "grey30",
+      size = rel(0.8),
+      margin = margin(b=8, unit = 'mm')
+    ),
+    plot.caption = element_text(size = rel(0.6), color = "grey20")
+  ) +
+  annotate(
+    'segment',
+    x = 1900,
+    xend = 2000,
+    y = 265,
+    yend = 265,
+    linetype = 2,
+    linewidth = 1,
+    color = "grey10"
+  )
+
+```
+
+
+A bump chart could be interesting as well to compare changes in the rankings of age adjusted mortality rates.
+
+This also a good candidate for gganimation where the lines are animated.
 

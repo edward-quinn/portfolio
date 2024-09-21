@@ -14,13 +14,15 @@
   {
     "listing": "/R.html",
     "items": [
-      "/R/project_r1/project_r1.html"
+      "/R/ggplot2_package/ggplot2_package.html",
+      "/R/renv_cheatsheet/renv_cheatsheet.html"
     ]
   },
   {
     "listing": "/Python.html",
     "items": [
-      "/Python/seaborn_library/seaborn_data_viz.html"
+      "/Python/seaborn_library/seaborn_data_viz.html",
+      "/Python/venv_cheatsheet/venv_cheatsheet.html"
     ]
   }
 ]
