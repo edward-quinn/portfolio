@@ -14,15 +14,13 @@
   {
     "listing": "/R.html",
     "items": [
-      "/R/project_r1/project_r1.html",
-      "/R/project_r2/project_r2.html"
+      "/R/project_r1/project_r1.html"
     ]
   },
   {
     "listing": "/Python.html",
     "items": [
-      "/Python/project_p1/project_p1.html",
-      "/Python/project_p2/project_p2.html"
+      "/Python/seaborn_library/seaborn_data_viz.html"
     ]
   }
 ]

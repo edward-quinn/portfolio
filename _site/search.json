@@ -32,7 +32,7 @@
     "href": "index.html",
     "title": "Edward B. Quinn, PhD, MPH",
     "section": "",
-    "text": "I am a Senior Data Analyst and a published health researcher. My PhD training was in epigenetics and health equity, where I used R to analyze over 400 million data points.\nMy skill set is currently expanding to include Shiny, SQL, Python, and Tableau. In my spare time, I love to travel and watch mixed martial arts."
+    "text": "I am a Data Scientist and a published health researcher. My PhD training was in epigenetics and health equity, where I used R to analyze over 400 million data points. In my spare time, I love to travel and watch mixed martial arts."
   },
   {
     "objectID": "index.html#featured-projects",
@@ -74,14 +74,14 @@
     "href": "R.html",
     "title": "R Projects",
     "section": "",
-    "text": "Project 1\n\n\n\n\n\n\nR Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nR Project 2\n\n\n\n\n\n\nR Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Project 1\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Python.html",
     "href": "Python.html",
     "title": "Python Projects",
     "section": "",
-    "text": "Python Project 1\n\n\n\n\n\n\nPython Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nPython Project 2\n\n\n\n\n\n\nPython Projects\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "The Seaborn library in Python\n\n\n\n\n\n\nPython\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "R/project_r1/project_r1.html",
@@ -100,9 +100,9 @@
   {
     "objectID": "Python/project_p1/project_p1.html",
     "href": "Python/project_p1/project_p1.html",
-    "title": "Python Project 1",
+    "title": "Using Virtual Environments in Python",
     "section": "",
-    "text": "This is a Python-based project.\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
+    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv .venv\nActivate the virtual environment using .\\.venv\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing.\n\n\n\n\n\nPull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
   },
   {
     "objectID": "Python/project_p1/project_p1.html#overview",
@@ -138,5 +138,47 @@
     "title": "R Project 2",
     "section": "",
     "text": "This is a second R-based project.\n\n\nCode\n# R code goes here\nprint(seq(1,10,1))\n\n\n [1]  1  2  3  4  5  6  7  8  9 10"
+  },
+  {
+    "objectID": "Python/project_p1/project_p1.html#create-and-save-a-virtual-environment",
+    "href": "Python/project_p1/project_p1.html#create-and-save-a-virtual-environment",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv .venv\nActivate the virtual environment using .\\.venv\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing."
+  },
+  {
+    "objectID": "Python/project_p1/project_p1.html#recreate-a-virtual-environment",
+    "href": "Python/project_p1/project_p1.html#recreate-a-virtual-environment",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Pull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
+  },
+  {
+    "objectID": "Python/seaborn_library/seaborn_data_viz.html",
+    "href": "Python/seaborn_library/seaborn_data_viz.html",
+    "title": "The Seaborn library in Python",
+    "section": "",
+    "text": "Using Seaborn to visualize progress in public health\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
+  },
+  {
+    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html",
+    "href": "Python/venv_cheatsheet/venv_cheatsheet.html",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv .venv\nActivate the virtual environment using .\\.venv\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing.\n\n\n\n\n\nPull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
+  },
+  {
+    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html#create-and-save-a-virtual-environment",
+    "href": "Python/venv_cheatsheet/venv_cheatsheet.html#create-and-save-a-virtual-environment",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv .venv\nActivate the virtual environment using .\\.venv\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing."
+  },
+  {
+    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html#recreate-a-virtual-environment",
+    "href": "Python/venv_cheatsheet/venv_cheatsheet.html#recreate-a-virtual-environment",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Pull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
   }
 ]

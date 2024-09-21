@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-09-15">
 
-<title>Using Virtual Environments in Python – Data Science Portfolio</title>
+<title>The Seaborn library in Python – Data Science Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -118,9 +152,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Using Virtual Environments in Python</h1>
+<h1 class="title">The Seaborn library in Python</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Python Projects</div>
+    <div class="quarto-category">Python</div>
+    <div class="quarto-category">Data Visualization</div>
   </div>
   </div>
 
@@ -144,30 +179,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="a-cheatsheet-for-windows" class="level1">
-<h1>A cheatsheet for windows</h1>
-<section id="create-and-save-a-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="create-and-save-a-virtual-environment">Create and save a virtual environment</h2>
-<ol type="1">
-<li>Make sure you are in the directory where you want to create a virtual environment.</li>
-<li>Use the following code: <code>python -m venv .venv</code></li>
-<li>Activate the virtual environment using <code>.\.venv\Scripts\activate</code></li>
-<li>pip install whatever it is you need to install.</li>
-<li>Export dependencies by using <code>pip freeze &gt;&gt; requirements.txt</code></li>
-<li>Deactivate the virtual environment by using <code>deactivate</code></li>
-<li>Make sure to add .venv to your .gitignore file before committing.</li>
-</ol>
-</section>
-<section id="recreate-a-virtual-environment" class="level2">
-<h2 class="anchored" data-anchor-id="recreate-a-virtual-environment">Recreate a virtual environment</h2>
-<ol type="1">
-<li>Pull the repo from github</li>
-<li>Create a new virtual environment as described above.</li>
-<li>Use the requirements.txt to file to recreate the virtual environment like so: <code>pip install -r requirements.txt</code>.</li>
-</ol>
+<section id="using-seaborn-to-visualize-progress-in-public-health" class="level1">
+<h1>Using Seaborn to visualize progress in public health</h1>
+<div id="4a3b3a68" class="cell" data-execution_count="1">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello python'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>hello python</code></pre>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

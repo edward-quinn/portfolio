@@ -21,6 +21,4 @@ about:
 ---
 
 
-I am a Senior Data Analyst and a published health researcher. My PhD training was in epigenetics and health equity, where I used R to analyze over 400 million data points.
-
-My skill set is currently expanding to include Shiny, SQL, Python, and Tableau. In my spare time, I love to travel and watch mixed martial arts.
+I am a Data Scientist and a published health researcher. My PhD training was in epigenetics and health equity, where I used R to analyze over 400 million data points. In my spare time, I love to travel and watch mixed martial arts.

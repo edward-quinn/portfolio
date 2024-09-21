@@ -37,5 +37,11 @@
   },
   "R/project_r2/project_r2.qmd": {
     "project_r2.html": "bf4c2b1d"
+  },
+  "Python/venv_cheatsheet/venv_cheatsheet.qmd": {
+    "venv_cheatsheet.html": "dfe47d8c"
+  },
+  "Python/seaborn_library/seaborn_data_viz.qmd": {
+    "seaborn_data_viz.html": "b92c9663"
   }
 }
