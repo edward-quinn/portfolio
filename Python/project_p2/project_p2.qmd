@@ -1,12 +1,12 @@
 ---
-title: "Python Project 2"
+title: "The Seaborn library in Python"
 date: 2024-09-15
-categories: [Python Projects]
+categories: [Python Projects, Data Visualization]
 ---
 
-## Overview
+# Using Seaborn to visualize progress in public health
 
-This is a second Python-based project.
+
 
 ```{python}
 # Python code goes here
