@@ -15,7 +15,6 @@ categories: [R]
 6. Add the code chunk below which specifies using the local renv.lock file using `renv::use(lockfile = "renv.lock")`
 
 
-# Use the local renv lock file to recreate virtual environment
 ```{r}
 #| echo: false
 #| results: 'hide'

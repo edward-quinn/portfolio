@@ -4,7 +4,10 @@ date: 2024-09-15
 categories: [R, Data Visualization]
 ---
 
-# Use the local renv lock file to recreate virtual environment
+# Visualizing progress in public health using ggplot2
+
+content
+
 ```{r}
 #| echo: false
 #| results: 'hide'
