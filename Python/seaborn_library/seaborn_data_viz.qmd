@@ -6,6 +6,74 @@ categories: [Python, Data Visualization]
 
 # Using Seaborn to visualize progress in public health
 
+Activate the virtual environment
+
+
+
+```{python}
+
+import polars as pl
+
+
+```
+
+
+
+```{python}
+
+
+df = pl.read_csv("https://data.cdc.gov/resource/6rkc-nb2q.csv")
+
+
+```
+
+
+
+
+```{python}
+
+
+df.head()
+
+
+```
+
+
+
+```{python}
+
+
+print(df)
+
+
+```
+
+
+
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```
+
+
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```
+
+
+
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```
+
 
 
 ```{python}

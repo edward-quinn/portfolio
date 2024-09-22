@@ -158,28 +158,7 @@
     "href": "Python/seaborn_library/seaborn_data_viz.html",
     "title": "The Seaborn library in Python",
     "section": "",
-    "text": "Using Seaborn to visualize progress in public health\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
-  },
-  {
-    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html",
-    "href": "Python/venv_cheatsheet/venv_cheatsheet.html",
-    "title": "Using Virtual Environments in Python",
-    "section": "",
-    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv .venv\nActivate the virtual environment using .\\.venv\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing.\n\n\n\n\n\nPull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
-  },
-  {
-    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html#create-and-save-a-virtual-environment",
-    "href": "Python/venv_cheatsheet/venv_cheatsheet.html#create-and-save-a-virtual-environment",
-    "title": "Using Virtual Environments in Python",
-    "section": "",
-    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv .venv\nActivate the virtual environment using .\\.venv\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing."
-  },
-  {
-    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html#recreate-a-virtual-environment",
-    "href": "Python/venv_cheatsheet/venv_cheatsheet.html#recreate-a-virtual-environment",
-    "title": "Using Virtual Environments in Python",
-    "section": "",
-    "text": "Pull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
+    "text": "Using Seaborn to visualize progress in public health\nActivate the virtual environment\n\n\nCode\nimport polars as pl\n\n\n\n\nCode\ndf = pl.read_csv(\"https://data.cdc.gov/resource/6rkc-nb2q.csv\")\n\n\n\n\nCode\ndf.head()\n\n\n\nshape: (5, 3)\n\n\n\nyear\nleading_causes\nage_adjusted_death_rate\n\n\ni64\nstr\nf64\n\n\n\n\n1900\n\"Heart Disease\"\n265.4\n\n\n1901\n\"Heart Disease\"\n272.6\n\n\n1902\n\"Heart Disease\"\n285.2\n\n\n1903\n\"Heart Disease\"\n304.5\n\n\n1904\n\"Heart Disease\"\n331.5\n\n\n\n\n\n\n\n\nCode\nprint(df)\n\n\nshape: (595, 3)\n┌──────┬─────────────────────────┬─────────────────────────┐\n│ year ┆ leading_causes          ┆ age_adjusted_death_rate │\n│ ---  ┆ ---                     ┆ ---                     │\n│ i64  ┆ str                     ┆ f64                     │\n╞══════╪═════════════════════════╪═════════════════════════╡\n│ 1900 ┆ Heart Disease           ┆ 265.4                   │\n│ 1901 ┆ Heart Disease           ┆ 272.6                   │\n│ 1902 ┆ Heart Disease           ┆ 285.2                   │\n│ 1903 ┆ Heart Disease           ┆ 304.5                   │\n│ 1904 ┆ Heart Disease           ┆ 331.5                   │\n│ …    ┆ …                       ┆ …                       │\n│ 2014 ┆ Influenza and Pneumonia ┆ 15.1                    │\n│ 2015 ┆ Influenza and Pneumonia ┆ 15.2                    │\n│ 2016 ┆ Influenza and Pneumonia ┆ 13.5                    │\n│ 2017 ┆ Influenza and Pneumonia ┆ 14.3                    │\n│ 2018 ┆ Influenza and Pneumonia ┆ 14.9                    │\n└──────┴─────────────────────────┴─────────────────────────┘\n\n\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python\n\n\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python\n\n\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python\n\n\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
   },
   {
     "objectID": "R/ggplot2_package/ggplot2_package.html",

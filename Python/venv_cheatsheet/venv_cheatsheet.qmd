@@ -10,8 +10,8 @@ categories: [Python]
 ## Create and save a virtual environment
 
 1. Make sure you are in the directory where you want to create a virtual environment.
-2. Use the following code: `python -m venv .venv`
-3. Activate the virtual environment using `.\.venv\Scripts\activate`
+2. Use the following code: `python -m venv env`
+3. Activate the virtual environment using `.\env\Scripts\activate`
 4. pip install whatever it is you need to install. 
 5. Export dependencies by using `pip freeze >> requirements.txt`
 6. Deactivate the virtual environment by using `deactivate`
