@@ -188,19 +188,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="using-seaborn-to-visualize-progress-in-public-health" class="level1">
 <h1>Using Seaborn to visualize progress in public health</h1>
 <p>Activate the virtual environment</p>
-<div id="4165ef89" class="cell" data-execution_count="1">
+<div id="31af52d6" class="cell" data-execution_count="1">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> polars <span class="im">as</span> pl</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="28dffc27" class="cell" data-execution_count="2">
+<div id="463a4864" class="cell" data-execution_count="2">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pl.read_csv(<span class="st">"https://data.cdc.gov/resource/6rkc-nb2q.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<div id="82fd46f7" class="cell" data-execution_count="3">
+<div id="87ec0678" class="cell" data-execution_count="3">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -258,43 +259,47 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="03021f45" class="cell" data-execution_count="4">
+<p>The <code>year</code> column is an integer. Make a new column where the year is a date time.</p>
+<div id="6f398d6b" class="cell" data-execution_count="4">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new datetime column by combining year with a default month and day</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.with_columns(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    (pl.col(<span class="st">"year"</span>).cast(pl.Utf8) <span class="op">+</span> <span class="st">"-01-01"</span>).<span class="bu">str</span>.strptime(pl.Date).alias(<span class="st">"date"</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stdout">
-<pre><code>shape: (595, 3)
-┌──────┬─────────────────────────┬─────────────────────────┐
-│ year ┆ leading_causes          ┆ age_adjusted_death_rate │
-│ ---  ┆ ---                     ┆ ---                     │
-│ i64  ┆ str                     ┆ f64                     │
-╞══════╪═════════════════════════╪═════════════════════════╡
-│ 1900 ┆ Heart Disease           ┆ 265.4                   │
-│ 1901 ┆ Heart Disease           ┆ 272.6                   │
-│ 1902 ┆ Heart Disease           ┆ 285.2                   │
-│ 1903 ┆ Heart Disease           ┆ 304.5                   │
-│ 1904 ┆ Heart Disease           ┆ 331.5                   │
-│ …    ┆ …                       ┆ …                       │
-│ 2014 ┆ Influenza and Pneumonia ┆ 15.1                    │
-│ 2015 ┆ Influenza and Pneumonia ┆ 15.2                    │
-│ 2016 ┆ Influenza and Pneumonia ┆ 13.5                    │
-│ 2017 ┆ Influenza and Pneumonia ┆ 14.3                    │
-│ 2018 ┆ Influenza and Pneumonia ┆ 14.9                    │
-└──────┴─────────────────────────┴─────────────────────────┘</code></pre>
 </div>
-</div>
-<div id="92e26e95" class="cell" data-execution_count="5">
+<div id="f401d401" class="cell" data-execution_count="5">
 <details open="" class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello python'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>df.glimpse()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>hello python</code></pre>
+<pre><code>Rows: 595
+Columns: 4
+$ year                     &lt;i64&gt; 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909
+$ leading_causes           &lt;str&gt; 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease'
+$ age_adjusted_death_rate  &lt;f64&gt; 265.4, 272.6, 285.2, 304.5, 331.5, 327.8, 325.5, 356.5, 328.6, 329.2
+$ date                    &lt;date&gt; 1900-01-01, 1901-01-01, 1902-01-01, 1903-01-01, 1904-01-01, 1905-01-01, 1906-01-01, 1907-01-01, 1908-01-01, 1909-01-01
+</code></pre>
 </div>
 </div>
-<div id="c962d31b" class="cell" data-execution_count="6">
+<p>Now make a single line chart for all leading causes of death.</p>
+<div id="7436f59a" class="cell" data-execution_count="6">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sns.lineplot(data <span class="op">=</span> df, x <span class="op">=</span> <span class="st">'date'</span>, y <span class="op">=</span> <span class="st">'age_adjusted_death_rate'</span>, hue <span class="op">=</span> <span class="st">'leading_causes'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="seaborn_data_viz_files/figure-html/cell-7-output-1.png" width="594" height="429" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="70dbe383" class="cell" data-execution_count="7">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span>
@@ -304,21 +309,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>hello python</code></pre>
 </div>
 </div>
-<div id="869f1408" class="cell" data-execution_count="7">
+<div id="cc2c674e" class="cell" data-execution_count="8">
 <details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello python'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>hello python</code></pre>
-</div>
-</div>
-<div id="2766ebdc" class="cell" data-execution_count="8">
-<details open="" class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Python code goes here</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hello python'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>hello python</code></pre>

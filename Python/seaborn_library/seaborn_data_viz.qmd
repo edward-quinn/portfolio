@@ -13,6 +13,7 @@ Activate the virtual environment
 ```{python}
 
 import polars as pl
+import seaborn as sns
 
 
 ```
@@ -20,40 +21,28 @@ import polars as pl
 
 
 ```{python}
-
 
 df = pl.read_csv("https://data.cdc.gov/resource/6rkc-nb2q.csv")
 
-
 ```
 
 
 
 
 ```{python}
-
 
 df.head()
 
-
 ```
 
-
+The `year` column is an integer. Make a new column where the year is a date time.
 
 ```{python}
 
-
-print(df)
-
-
-```
-
-
-
-
-```{python}
-# Python code goes here
-print('hello python')
+# Create a new datetime column by combining year with a default month and day
+df = df.with_columns(
+    (pl.col("year").cast(pl.Utf8) + "-01-01").str.strptime(pl.Date).alias("date")
+)
 
 ```
 
@@ -61,7 +50,16 @@ print('hello python')
 
 ```{python}
 # Python code goes here
-print('hello python')
+df.glimpse()
+
+```
+
+Now make a single line chart for all leading causes of death.
+
+```{python}
+
+sns.lineplot(data = df, x = 'date', y = 'age_adjusted_death_rate', hue = 'leading_causes')
+
 
 ```
 
