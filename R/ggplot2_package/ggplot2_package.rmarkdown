@@ -4,7 +4,11 @@ date: 2024-09-15
 categories: [R, Data Visualization, ggplot2]
 ---
 
+
+
 # Visualizing heart disease death rates using ggplot2
+
+
 
 
 
@@ -14,9 +18,6 @@ categories: [R, Data Visualization, ggplot2]
 
 renv::use(lockfile = "renv.lock")
 ```
-
-
-
 
 ```{r}
 #| include: false
@@ -31,7 +32,11 @@ library(gghighlight)
 
 
 
-The National Center of Health Statistics [has published data](https://data.cdc.gov/NCHS/NCHS-Age-adjusted-Death-Rates-for-Selected-Major-C/6rkc-nb2q/about_data) on age-adjusted death rates for five leading causes of death in the United States between 1900 - 2018. Let's look at visualization strategies to highlight different insights from the data. Shoutout to [Albert Rapp's YouTube video on linecharts](https://www.youtube.com/watch?v=nDa6aHxiSYQ&list=PLBnFxG6owe1HRvUL6A5QNF_8ujP8NdLMc&index=7). I learned a lot of this code from Albert's excellent video tutorial.
+
+
+The National Center of Health Statistics [has published data](https://data.cdc.gov/NCHS/NCHS-Age-adjusted-Death-Rates-for-Selected-Major-C/6rkc-nb2q/about_data) on age-adjusted death rates for five leading causes of death in the United States between 1900 - 2018. Let's look at visualization strategies to highlight different insights from the data. Shoutout to [Albert Rapp's YouTube video on linecharts](https://www.youtube.com/watch?v=nDa6aHxiSYQ&list=PLBnFxG6owe1HRvUL6A5QNF_8ujP8NdLMc&index=7). I learned a lot of this code from Albert's excellent video.
+
+
 
 
 ```{r}
@@ -48,7 +53,6 @@ sysfonts::font_add_google('Merriweather')
 showtext_auto()
 
 ```
-
 
 ```{r}
 #| warning: false
@@ -116,7 +120,4 @@ ggplot(aes(year, age_adjusted_death_rate, color = leading_causes)) +
   )
 
 ```
-
-
-
 
