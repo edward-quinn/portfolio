@@ -74,14 +74,14 @@
     "href": "R.html",
     "title": "R Projects",
     "section": "",
-    "text": "ggplot2 package in R\n\n\n\n\n\n\nR\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nrenv Cheatsheet\n\n\n\n\n\n\nR\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "ggplot2 package in R\n\n\n\n\n\n\nR\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "Python.html",
     "href": "Python.html",
     "title": "Python Projects",
     "section": "",
-    "text": "The Seaborn library in Python\n\n\n\n\n\n\nPython\n\n\nData Visualization\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Virtual Environments in Python\n\n\n\n\n\n\nPython\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Data visualization in Python\n\n\n\n\n\n\nPython\n\n\nData Visualization\n\n\nSeaborn\n\n\n\n\n\n\n\n\n\nSep 15, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "R/project_r1/project_r1.html",
@@ -156,7 +156,7 @@
   {
     "objectID": "Python/seaborn_library/seaborn_data_viz.html",
     "href": "Python/seaborn_library/seaborn_data_viz.html",
-    "title": "The Seaborn library in Python",
+    "title": "Data visualization in Python",
     "section": "",
     "text": "Using Seaborn to visualize progress in public health\nActivate the virtual environment\n\n\nCode\nimport polars as pl\nimport seaborn as sns\n\n\n\n\nCode\ndf = pl.read_csv(\"https://data.cdc.gov/resource/6rkc-nb2q.csv\")\n\n\n\n\nCode\ndf.head()\n\n\n\nshape: (5, 3)\n\n\n\nyear\nleading_causes\nage_adjusted_death_rate\n\n\ni64\nstr\nf64\n\n\n\n\n1900\n\"Heart Disease\"\n265.4\n\n\n1901\n\"Heart Disease\"\n272.6\n\n\n1902\n\"Heart Disease\"\n285.2\n\n\n1903\n\"Heart Disease\"\n304.5\n\n\n1904\n\"Heart Disease\"\n331.5\n\n\n\n\n\n\nThe year column is an integer. Make a new column where the year is a date time.\n\n\nCode\n# Create a new datetime column by combining year with a default month and day\ndf = df.with_columns(\n    (pl.col(\"year\").cast(pl.Utf8) + \"-01-01\").str.strptime(pl.Date).alias(\"date\")\n)\n\n\n\n\nCode\n# Python code goes here\ndf.glimpse()\n\n\nRows: 595\nColumns: 4\n$ year                     &lt;i64&gt; 1900, 1901, 1902, 1903, 1904, 1905, 1906, 1907, 1908, 1909\n$ leading_causes           &lt;str&gt; 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease', 'Heart Disease'\n$ age_adjusted_death_rate  &lt;f64&gt; 265.4, 272.6, 285.2, 304.5, 331.5, 327.8, 325.5, 356.5, 328.6, 329.2\n$ date                    &lt;date&gt; 1900-01-01, 1901-01-01, 1902-01-01, 1903-01-01, 1904-01-01, 1905-01-01, 1906-01-01, 1907-01-01, 1908-01-01, 1909-01-01\n\n\n\nNow make a single line chart for all leading causes of death.\n\n\nCode\nsns.lineplot(data = df, x = 'date', y = 'age_adjusted_death_rate', hue = 'leading_causes')\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python\n\n\n\n\nCode\n# Python code goes here\nprint('hello python')\n\n\nhello python"
   },
@@ -173,5 +173,26 @@
     "title": "renv Cheatsheet",
     "section": "",
     "text": "An renv cheatsheet\n\nUse renv::init() to start a brand new project. This creates an renv.lock file listing packages and versions.\nInstall packages as normal using install.packages()\nOccasionally use renv::snapshot() to capture updates to your virtual environment within the renv.lock file\nAfter you finish a post, use renv::snapshot() one last time.\nCopy the renv.lock file into the root directory for the particular post you just finished. cp renv.lock path_to_blog_post_directory/\nAdd the code chunk below which specifies using the local renv.lock file using renv::use(lockfile = \"renv.lock\")"
+  },
+  {
+    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html",
+    "href": "Python/venv_cheatsheet/venv_cheatsheet.html",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv env\nActivate the virtual environment using .\\env\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing.\n\n\n\n\n\nPull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
+  },
+  {
+    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html#create-and-save-a-virtual-environment",
+    "href": "Python/venv_cheatsheet/venv_cheatsheet.html#create-and-save-a-virtual-environment",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Make sure you are in the directory where you want to create a virtual environment.\nUse the following code: python -m venv env\nActivate the virtual environment using .\\env\\Scripts\\activate\npip install whatever it is you need to install.\nExport dependencies by using pip freeze &gt;&gt; requirements.txt\nDeactivate the virtual environment by using deactivate\nMake sure to add .venv to your .gitignore file before committing."
+  },
+  {
+    "objectID": "Python/venv_cheatsheet/venv_cheatsheet.html#recreate-a-virtual-environment",
+    "href": "Python/venv_cheatsheet/venv_cheatsheet.html#recreate-a-virtual-environment",
+    "title": "Using Virtual Environments in Python",
+    "section": "",
+    "text": "Pull the repo from github\nCreate a new virtual environment as described above.\nUse the requirements.txt to file to recreate the virtual environment like so: pip install -r requirements.txt."
   }
 ]

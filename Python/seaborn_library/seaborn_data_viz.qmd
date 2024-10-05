@@ -1,7 +1,7 @@
 ---
-title: "The Seaborn library in Python"
+title: "Data visualization in Python"
 date: 2024-09-15
-categories: [Python, Data Visualization]
+categories: [Python, Data Visualization, Seaborn]
 ---
 
 # Using Seaborn to visualize progress in public health
