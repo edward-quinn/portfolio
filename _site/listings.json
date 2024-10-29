@@ -14,7 +14,8 @@
   {
     "listing": "/R.html",
     "items": [
-      "/R/ggplot2_package/ggplot2_package.html"
+      "/R/ggplot2_package/ggplot2_package.html",
+      "/R/renv_cheatsheet/renv_cheatsheet.html"
     ]
   },
   {

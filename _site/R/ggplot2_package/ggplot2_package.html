@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="visualizing-heart-disease-death-rates-using-ggplot2" class="level1">
 <h1>Visualizing heart disease death rates using ggplot2</h1>
-<p>The National Center of Health Statistics <a href="https://data.cdc.gov/NCHS/NCHS-Age-adjusted-Death-Rates-for-Selected-Major-C/6rkc-nb2q/about_data">has published data</a> on age-adjusted death rates for five leading causes of death in the United States between 1900 - 1918. Let’s look at visualization strategies to highlight different insights from the data. Big shoutout to Albert Rapp’s video</p>
+<p>The National Center of Health Statistics <a href="https://data.cdc.gov/NCHS/NCHS-Age-adjusted-Death-Rates-for-Selected-Major-C/6rkc-nb2q/about_data">has published data</a> on age-adjusted death rates for five leading causes of death in the United States between 1900 - 2018. Let’s look at visualization strategies to highlight different insights from the data. Shoutout to <a href="https://www.youtube.com/watch?v=nDa6aHxiSYQ&amp;list=PLBnFxG6owe1HRvUL6A5QNF_8ujP8NdLMc&amp;index=7">Albert Rapp’s YouTube video on linecharts</a>. I learned a lot of this code from Albert’s excellent video tutorial.</p>
 <div class="cell">
 <details open="" class="code-fold">
 <summary>Code</summary>
@@ -214,7 +214,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="fu">element_blank</span>(),</span>
 <span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> title_text,</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Death Rate (per 100,000)"</span>,</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Age-Adjusted Death Rate (per 100,000)"</span>,</span>
 <span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">caption =</span> <span class="st">"Source: National Center for Health Statistics"</span></span>
 <span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
 <span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gghighlight</span>(</span>

@@ -69,7 +69,7 @@ ggplot(aes(year, age_adjusted_death_rate, color = leading_causes)) +
     x = "Year",
     y = element_blank(),
     title = title_text,
-    subtitle = "Death Rate (per 100,000)",
+    subtitle = "Age-Adjusted Death Rate (per 100,000)",
     caption = "Source: National Center for Health Statistics"
   ) +
   gghighlight(
