@@ -14,6 +14,7 @@ Activate the virtual environment
 
 import polars as pl
 import seaborn as sns
+import matplotlib as plt
 
 
 ```
@@ -44,15 +45,10 @@ df = df.with_columns(
     (pl.col("year").cast(pl.Utf8) + "-01-01").str.strptime(pl.Date).alias("date")
 )
 
-```
-
-
-
-```{python}
-# Python code goes here
-df.glimpse()
+df.head()
 
 ```
+
 
 Now make a single line chart for all leading causes of death.
 
@@ -63,6 +59,30 @@ sns.lineplot(data = df, x = 'date', y = 'age_adjusted_death_rate', hue = 'leadin
 
 ```
 
+This is okay, but there is a lot we can do to improve this graph. Let's move the legend and change the labels for starters.
+
+```{python}
+
+example = sns.lineplot(
+    data = df, 
+    x = 'date', 
+    y = 'age_adjusted_death_rate', 
+    hue = 'leading_causes'
+    )
+
+sns.move_legend(
+    obj = example, 
+    loc = "center left",
+    bbox_to_anchor = (1, 0.5), 
+    ncol = 1,
+    frameon = False,
+    title = "Cause of Death"
+)
+
+
+```
+
+
 
 
 
@@ -79,3 +99,28 @@ print('hello python')
 print('hello python')
 
 ```
+
+
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```
+
+
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```
+
+
+
+```{python}
+# Python code goes here
+print('hello python')
+
+```
+
